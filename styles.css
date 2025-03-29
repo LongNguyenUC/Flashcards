@@ -13,21 +13,29 @@ textarea {
   font-size: 100%;
 }
 
-
-textarea{
-    resize: none;
-    height: 100px;
-}
-
 .card-creator{
     height:200px;
     width: 400px;
     padding: 20px;
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 75px;
+}
+
+#term{
+    width: 100%;
 }
 
 body{
     display: flex;
+    justify-content: center;
     gap: 20px;
 }
 
@@ -42,6 +50,14 @@ body{
 
 .buttons{
     align-items: end;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#back,
+#next{
+    padding: 2px 10px;
 }
 
 .card-container{
@@ -50,4 +66,7 @@ body{
     border: 1px solid black;
     border-radius: 3px;
     margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

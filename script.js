@@ -24,6 +24,8 @@ addButton.addEventListener('click', () =>{
     if (cards.length === 1){
         updateCard();
     }
+    term.value = "";
+    def.value = "";
 })
 
 cardDisplay.addEventListener('click', () => {

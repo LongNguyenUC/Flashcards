@@ -10,10 +10,10 @@
 
     <div class="card-creator">
         <div>
-            <input type="text" id="term" name="term" placeholder="Enter the term">
+            <input type="text" id="term" name="term" placeholder="Enter the term" required>
         </div>
         <div>
-            <textarea name="" id="def" placeholder="Enter the defintion"></textarea>
+            <textarea name="" id="def" placeholder="Enter the defintion" required></textarea>
         </div>
         <button id="addCard" type="button">Add Flashcard</button>
     </div>
@@ -22,9 +22,10 @@
         <div class="card-container">
 
         </div>
+
         <div class="buttons">
-            <button type="button">Back</button>
-            <button type="button">Foward</button>
+            <button id="back" type="button">Back</button>
+            <button id="next" type="button">Next</button>
         </div>
     </div>
     <script src="script.js"></script>
