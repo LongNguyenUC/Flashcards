@@ -16,10 +16,13 @@ function Flashcard(term, def){
     this.isFrontFaced = true;
 }
 
+function updateCard(){
+    cardDisplay.textContent = cards[currentCard].term;
+}
 addButton.addEventListener('click', () =>{
     cards.push(new Flashcard(term.value, def.value));
-    if (cards.length === 0){
-
+    if (cards.length === 1){
+        updateCard();
     }
 })
 
@@ -34,5 +37,22 @@ cardDisplay.addEventListener('click', () => {
         }
     }
 })
+
+backButton.addEventListener('click', ()=>{
+    if(currentCard > 0){
+        cards[currentCard].isFrontFaced = true;
+        currentCard--;
+        updateCard();
+    }
+})
+
+nextButton.addEventListener('click', ()=>{
+    if(currentCard < cards.length - 1){
+        cards[currentCard].isFrontFaced = true;
+        currentCard++;
+        updateCard();
+    }
+})
+
 
 
